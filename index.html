@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+
+	<title>Untitled</title>
+
+</head>
+
+<body>
+
+	<div id="main">
+
+		<div class="glitch" data-text="Вы хотите ввести код?">Вы хотите ввести код?</div> 
+
+		<button class="btn btn-2 btn-2i yes" onclick="yes()">Да</button>
+		<button class="btn btn-2 btn-2i no" onclick="no()">Нет</button>
+
+	</div>
+
+	<script>
+		function yes(){
+			var password = 1;
+			while (password <= 100000000000000)
+       			password = prompt('Введите пароль', "");
+       		
+       		close_all();
+
+       		var audio = new Audio(); 
+			audio.src = 'yes.mp3'; 
+			audio.autoplay = true;
+   		}
+   		function no(){
+   			close_all();
+
+   			var audio = new Audio(); 
+			audio.src = 'no.mp3'; 
+			audio.autoplay = true;
+   		}
+
+   		function close_all(){
+   			var disp = document.getElementById('main').style;
+       		disp.display = 'none';
+   		}
+	</script>
+				
+</body>
+</html>
